@@ -1,23 +1,19 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
   <header>
     <div class="navbar bg-base-100">
       <div class="flex-1">
-        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a class="btn btn-ghost normal-case text-xl">Krushn's Devtools</a>
       </div>
       <div class="flex-none">
         <ul class="menu menu-horizontal px-1">
           <li>
-            <RouterLink to="/">Home</RouterLink>
+            <router-link to="/">Home</router-link>
           </li>
           <li>
-            <RouterLink to="/gradients">Gradients</RouterLink>
+            <router-link to="/gradients">Gradients</router-link>
           </li>
           <li>
-            <RouterLink to="/about">About</RouterLink>
+            <router-link to="/about">About</router-link>
           </li>
         </ul>
       </div>
@@ -25,6 +21,6 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
 
   <main>
-    <RouterView />
+    <router-view />
   </main>
 </template>
