@@ -5,7 +5,7 @@
         <div
           class="card card-side bg-base-200 hover:bg-base-300 shadow-sm mb-8"
         >
-          <figure>
+          <figure v-if="app.imageURL">
             <img :src="app.imageURL" alt="Movie" />
           </figure>
           <div class="card-body">
@@ -24,19 +24,19 @@ const apps = [
     link: 'gradients',
     label: 'Gradients',
     description: 'A collection of gradients that can be used in applications.',
-    imageURL: 'https://picsum.photos/160/210'
+    // imageURL: 'https://picsum.photos/160/210'
   },
-  {
-    link: 'waves',
-    label: 'Waves',
-    description: 'A collection of gradients that can be used in applications.',
-    imageURL: 'https://picsum.photos/160/210'
-  },
-  {
-    link: 'icons',
-    label: 'Icons',
-    description: 'A collection of gradients that can be used in applications.',
-    imageURL: 'https://picsum.photos/160/210'
-  }
+  // {
+  //   link: 'waves',
+  //   label: 'Waves',
+  //   description: 'A collection of gradients that can be used in applications.',
+  //   imageURL: 'https://picsum.photos/160/210'
+  // },
+  // {
+  //   link: 'icons',
+  //   label: 'Icons',
+  //   description: 'A collection of gradients that can be used in applications.',
+  //   imageURL: 'https://picsum.photos/160/210'
+  // }
 ]
 </script>
