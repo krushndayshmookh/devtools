@@ -21,15 +21,8 @@
           <div class="">
             <div class="dropdown dropdown-start">
               <div tabindex="0" class="m-2 btn">
-                <img
-                  :src="
-                    directionOptions.find(
-                      option => option.value == previewState.direction
-                    ).icon
-                  "
-                  class="w-4 h-auto"
-                />
-                {{ previewState.direction }}
+                <img :src="previewState.direction.icon" class="w-4 h-auto" />
+                {{ previewState.direction.label }}
               </div>
               <ul
                 tabindex="0"
@@ -43,7 +36,7 @@
                     class="cursor-pointer"
                     v-for="option in directionOptions"
                     :key="option.value"
-                    @click="previewState.direction = option.value"
+                    @click="previewState.direction = option"
                   >
                     <img :src="option.icon" class="w-4 h-auto" />
                     {{ option.label }}
@@ -104,15 +97,19 @@ const previewState = reactive({
     name: 'Blue',
     colors: ['#4e54c8', '#8f94fb']
   },
-  direction: 'to bottom right'
+  direction: {
+    label: 'To Right',
+    value: 'to right',
+    icon: ArrowR
+  }
 })
 
 const gradientStyle = computed(() => {
   return {
     backgroundImage:
-      previewState.direction == 'radial'
+      previewState.direction.value == 'radial'
         ? `radial-gradient(${previewState.gradient.colors[0]}, ${previewState.gradient.colors[1]})`
-        : `linear-gradient(${previewState.direction}, ${previewState.gradient.colors[0]}, ${previewState.gradient.colors[1]})`
+        : `linear-gradient(${previewState.direction.value}, ${previewState.gradient.colors[0]}, ${previewState.gradient.colors[1]})`
   }
 })
 

@@ -24,8 +24,9 @@ const apps = [
     link: 'gradients',
     label: 'Gradients',
     description: 'A collection of gradients that can be used in applications.',
+    imageURL: ''
     // imageURL: 'https://picsum.photos/160/210'
-  },
+  }
   // {
   //   link: 'waves',
   //   label: 'Waves',
