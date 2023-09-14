@@ -1,6 +1,6 @@
 <template>
-  <div class="home container mx-auto px-8 py-8">
-    <div class="columns-3 gap-8">
+  <div class="home container mx-auto p-8">
+    <div class="grid grid-cols-3 gap-8">
       <router-link v-for="app in apps" :key="app.link" :to="`/${app.link}`">
         <div
           class="card card-side bg-base-200 hover:bg-base-300 shadow-sm mb-8"
