@@ -16,7 +16,7 @@
           </div>
         </router-link>
   
-        <a v-if="app.externalURL" :to="app.externalURL" target="_blank">
+        <a v-if="app.externalURL" :href="app.externalURL" target="_blank">
           <div
             class="card card-side bg-base-200 hover:bg-base-300 shadow-sm mb-8"
           >
